@@ -25,12 +25,17 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ### Step 2: 
 * **Action:** Name the VM `AD-DC-01` inside resource group `AD-DC-01_group` in **North Central US**. Selected **Windows Server 2022 Datacenter: Azure Edition**, set size to **`Standard_B2ats_v2`**, and set availability options to **No infrastructure redundancy required**.
-<img width="1470" height="834" alt="S2" src="https://github.com/user-attachments/assets/414f009a-d9d3-4012-af36-f813edb3bb88" />
+<img width="1470" height="834" alt="S2" src="https://github.com/user-attachments/assets/c31996fa-d3d0-4427-9d65-a48035b5611b" />
 
-### Step 3: Configuring Inbound Ports, Disks, & Auto-Shutdown
-* **Action:** Enabled inbound **RDP (3389)** for administrative testing, configured managed OS storage, and enabled **Auto-shutdown** under the Management tab.
-* **Outcome:** Protected cloud credits against accidental overnight runtime charges.
-![Step 3 - VM Networking and Management](images/03-vm-management.png)
+### Step 3: 
+* **Action:** Enabled inbound **RDP (3389)** for administrative testing.
+
+<img width="1470" height="791" alt="S30" src="https://github.com/user-attachments/assets/7f409714-c948-4259-a0d3-ec6bdeb1cbc8" />
+
+### Step 4: 
+* **Action:** Configure managed OS storage, and enabled **Auto-shutdown** under the Management tab
+
+<img width="1470" height="792" alt="S4_2" src="https://github.com/user-attachments/assets/147ea9bd-1971-489e-b889-323cee48874a" />
 
 ### Step 4: Reviewing & Deploying the Virtual Machine
 * **Action:** Validated all configuration parameters on the **Review + create** screen and initiated deployment.
