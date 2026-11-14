@@ -62,7 +62,7 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ### Step 8: Launching the Add Roles and Features Wizard
 
-* **Step 1:** Open **Server Manager**, Inside Server Manager, select **Manage** (top right), select **Add Roles and Features** and chose **Role-based or feature-based installation** targeting `AD-DC-01`.
+* **Step 1:** Open **Server Manager** dashboard, Inside Server Manager, select **Manage** (top right), select **Add Roles and Features** and chose **Role-based or feature-based installation** targeting `AD-DC-01`.
 
 <img width="1467" height="956" alt="S1_SERVER_DASH" src="https://github.com/user-attachments/assets/0dd2cdf5-73fd-4799-b062-9c2281a99235" />
 
