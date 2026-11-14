@@ -18,14 +18,14 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ## 📋 Part 1: Azure Infrastructure & Policy Troubleshooting
 
-### Step 1: Auditing Subscription Region Restrictions
-* **Action:** Navigated to **Azure Policy > Authoring > Assignments** and inspected the `Allowed resource deployment regions` (`listOfAllowedLocations`) policy parameter.
-* **Outcome:** Identified that the student subscription restricted deployments strictly to five regions (`canadacentral`, `westus`, `norwayeast`, `francecentral`, `northcentralus`), resolving initial validation errors.
+### Step 1: 
+* **Action:** Created a new Virtual Machine in Azure Portal. 
 
-### Step 2: Configuring Virtual Machine Basics & Sizing
-* **Action:** Created a new Virtual Machine named `AD-DC-01` inside resource group `AD-DC-01_group` in **North Central US**. Selected **Windows Server 2022 Datacenter: Azure Edition**, set size to **`Standard_B2ats_v2`**, and set Availability options to **No infrastructure redundancy required**.
-* **Outcome:** Configured a cost-effective VM profile (`$0.0186/hr`) compliant with student subscription quotas.
-![Step 2 - VM Basics Configuration](images/02-vm-basics.png)
+<img width="1470" height="833" alt="S1" src="https://github.com/user-attachments/assets/983e63ef-27dd-4196-a752-96e7932ecb02" />
+
+### Step 2: 
+* **Action:** Name the VM `AD-DC-01` inside resource group `AD-DC-01_group` in **North Central US**. Selected **Windows Server 2022 Datacenter: Azure Edition**, set size to **`Standard_B2ats_v2`**, and set availability options to **No infrastructure redundancy required**.
+<img width="1470" height="834" alt="S2" src="https://github.com/user-attachments/assets/414f009a-d9d3-4012-af36-f813edb3bb88" />
 
 ### Step 3: Configuring Inbound Ports, Disks, & Auto-Shutdown
 * **Action:** Enabled inbound **RDP (3389)** for administrative testing, configured managed OS storage, and enabled **Auto-shutdown** under the Management tab.
