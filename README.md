@@ -61,9 +61,12 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 ## 🏢 Part 3: Active Directory Domain Services (AD DS) Deployment
 
 ### Step 8: Launching the Add Roles and Features Wizard
-* **Step 1:** Inside Server Manager, selected **Manage > Add Roles and Features** and chose **Role-based or feature-based installation** targeting `AD-DC-01`.
+
+* **Step 1:** Open **Server Manager**, Inside Server Manager, select **Manage** (top right), select **Add Roles and Features** and chose **Role-based or feature-based installation** targeting `AD-DC-01`.
+
 <img width="1467" height="956" alt="S1_SERVER_DASH" src="https://github.com/user-attachments/assets/0dd2cdf5-73fd-4799-b062-9c2281a99235" />
-accepted the required **Remote Server Administration Tools (RSAT)** features, enabled automatic restart if required, and clicked **Install**.
+
+* **Step 2:** Clicked **Next** through the initial screens, accept the required **Remote Server Administration Tools (RSAT)** features, enabled automatic restart if required. 
 
 <img width="1470" height="920" alt="S2_NEXT" src="https://github.com/user-attachments/assets/61f8ee06-6e87-459c-9f2f-6604be344bf0" />
 
