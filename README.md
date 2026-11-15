@@ -5,6 +5,11 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ---
 
+## Key Skills & Outcomes Summary 
+Zero-trust remote administration via Azure Bastion, Active Directory forest promotion & DNS integration, Automated user lifecycle & GPO security hardening, FinOps cost control & resource deallocation
+
+---
+
 ## 🛠️ Environment & Architecture Specifications
 * **Cloud Provider:** Microsoft Azure (Azure for Students Subscription)
 * **Resource Group:** `AD-DC-01_group`
