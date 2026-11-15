@@ -21,8 +21,6 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 ---
 ### Architecture Diagram
 
-### Architecture Diagram
-
 ```mermaid
 flowchart TD
     Admin["💻 Admin Workstation<br/>(macOS Chrome Browser)"] ==>|"TLS 443 / HTML5<br/>Zero-Client RDP"| Bastion
