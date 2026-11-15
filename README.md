@@ -159,7 +159,11 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 * **Action:** Opened each Security Group's **Properties > Members** tab, clicked **Add**, validated employee names via **Check Names**, and linked all users to their corresponding department groups (`GRP-IT`, `GRP-HR`, `GRP-SALES`).
   
-<img width="1058" height="783" alt="S17" src="https://github.com/user-attachments/assets/2f03d683-7cd6-4638-86c6-558f6335228c" />
+<img width="908" height="785" alt="S17_2" src="https://github.com/user-attachments/assets/40d95ab6-d2e0-4a21-8f78-a0626070c7fc" />
+
+<img width="911" height="782" alt="S17_3" src="https://github.com/user-attachments/assets/83db759e-2323-45a5-9243-7b8ecbb8a81c" />
+
+<img width="911" height="783" alt="S17_4" src="https://github.com/user-attachments/assets/c73b3aea-725c-449b-9111-a4db4f522d58" />
 
 ---
 
