@@ -136,7 +136,7 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 
 ### Step 3: 
-* **Action:** Right-clicked **HR**, **IT**, and created two simulated employee user accounts inside each department OU (6 users total).
+* **Action:** Right-clicked **HR**, **IT**, **SALES**, and created two simulated employee user accounts inside each department OU (6 users total).
 
 <img width="1058" height="784" alt="S12" src="https://github.com/user-attachments/assets/016819dc-6b3e-45c9-9a57-d0bc3c31bba4" />
 
@@ -161,21 +161,28 @@ This project demonstrates the end-to-end deployment, configuration, and administ
   
 <img width="908" height="785" alt="S17_2" src="https://github.com/user-attachments/assets/40d95ab6-d2e0-4a21-8f78-a0626070c7fc" />
 
-<img width="911" height="782" alt="S17_3" src="https://github.com/user-attachments/assets/83db759e-2323-45a5-9243-7b8ecbb8a81c" />
+<img width="911" height="782" alt="S17_3" src="https://github.com/user-attachments/assets/8b562759-d517-40f1-9b36-ec586a785422" />
 
-<img width="911" height="783" alt="S17_4" src="https://github.com/user-attachments/assets/c73b3aea-725c-449b-9111-a4db4f522d58" />
+<img width="911" height="783" alt="S17_4" src="https://github.com/user-attachments/assets/28d5ebc9-d4a3-4b87-bbc8-56714787b045" />
 
 ---
 
-## 🎫 Part 5: Simulated Tier 1 Help Desk Operations
+## 🎫 Part 6: Simulated Tier 1 Help Desk Operations
 
-### Step 16: Executing Password Resets
+### Step 1: Executing Password Resets
 * **Action:** Simulated a forgotten-password support ticket in ADUC by right-clicking a user account, selecting **Reset Password**, and enforcing **"User must change password at next logon"**.
-![Step 19 - Help Desk Password Reset](images/19-password-reset.png)
 
-### Step 17: Simulating Employee Offboarding (Disabling Accounts)
+<img width="813" height="782" alt="S18" src="https://github.com/user-attachments/assets/f9be8145-5c88-4db3-b8d3-e73fda89441b" />
+
+<img width="811" height="782" alt="S19" src="https://github.com/user-attachments/assets/c718e8a5-264d-41ef-a682-9173e657bb48" />
+
+
+### Step 2: Simulating Employee Offboarding (Disabling Accounts)
 * **Action:** Simulated an HR termination ticket by right-clicking an employee account and selecting **Disable Account** to immediately revoke domain authentication while retaining audit logs.
-![Step 20 - Disabling Offboarded Account](images/20-disable-account.png)
+  
+<img width="912" height="783" alt="S20_2" src="https://github.com/user-attachments/assets/587f166c-87f2-4b4c-8967-2e298c75d94a" />
+
+<img width="911" height="786" alt="S20_3" src="https://github.com/user-attachments/assets/5eb5adcf-d243-4b89-a238-91197cf941f5" />
 
 ---
 
