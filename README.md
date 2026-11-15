@@ -96,7 +96,7 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 --- 
 
-## Part 4 : Installing the AD DS Server Role / Promote Server to a Domain Controller 
+## Part 4: Installing the AD DS Server Role / Promote Server to a Domain Controller 
 
 ### Step 1:
 
@@ -216,7 +216,6 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 <img width="813" height="783" alt="S23" src="https://github.com/user-attachments/assets/ddfe90cf-9472-42d7-bc6a-310dee3513fd" />
 
-
 ### Step 5: 
 
 * **Action:** Navigated to `User Configuration > Policies > Administrative Templates > Control Panel`
@@ -233,7 +232,7 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 ### Step 7: 
 
-* **Action:** * Set it to **Enabled**, and clicked **Apply > OK**.
+* **Action:** Set it to **Enabled**, and clicked **Apply > OK**.
 
 <img width="1073" height="784" alt="S29" src="https://github.com/user-attachments/assets/9bb6a433-1325-4435-b468-65983c2b2826" />
 
