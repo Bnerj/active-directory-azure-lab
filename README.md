@@ -70,25 +70,25 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 <img width="1467" height="832" alt="S1_SERVER_DASH" src="https://github.com/user-attachments/assets/0475bbd2-44e6-4cb3-9b6a-bef6b1ca3106" />
 
-### Step 2 
+### Step 2: 
 
 * **Action:** Choose **Role-based or feature-based installation** targeting `AD-DC-01`.
 
 <img width="1470" height="835" alt="S7_2" src="https://github.com/user-attachments/assets/0e9a521a-ad2f-440a-b619-38fdc317468a" />
 
-### Step 3
+### Step 3:
 
 * **Action:** Click **Next** three times, navigating to **Server Roles**. Select **Active Directory Domain Services**.
 
 <img width="1470" height="956" alt="S3_ACTIVE_DIRECT" src="https://github.com/user-attachments/assets/9fe2290e-34be-4307-80ef-884a3976f174" />
 
-### Step 4 
+### Step 4:
 
 * **Action:** When a pop-up window appears asking to add management tools, click **Add features** then click **Next**
 
 <img width="1235" height="783" alt="S4" src="https://github.com/user-attachments/assets/d5881408-e1a3-4e4b-bff0-f255d0e89232" />
 
-### Step 5 
+### Step 5:
 
 * **Action:** Click **Next** twice, check **Restart the destination server automatically** if required, click **Yes**, and click **Install**.
 
@@ -98,26 +98,26 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 ## Part 4 : Installing the AD DS Server Role / Promote Server to a Domain Controller 
 
-### Step 1
+### Step 1:
 
 * **Action:** Click the **yellow triangle warning icon** in Server Manager and select **Promote this server to a domain controller**.
 
  <img width="1056" height="784" alt="S6" src="https://github.com/user-attachments/assets/7e746238-758c-4f40-bfcb-473120071b9a" />
 
-### Step 2 
+### Step 2: 
 
 * **Action:** Select **Add a new forest** and specified Root domain name: **`lab.local`**. Click **Next**. 
 
 <img width="1058" height="789" alt="S7" src="https://github.com/user-attachments/assets/1c3adc6d-fda9-4b02-b39f-eb9c871e01bc" />
 
-### Step 3 
+### Step 3: 
 
 * **Action:** Configure Forest/Domain functional levels, integrated **DNS Server** and **Global Catalog (GC)** roles, and set a **Directory Services Restore Mode (DSRM)** password. clicked **Next** through the remaining screens until reaching the **Prerequisites Check**.
 
 
 <img width="1056" height="784" alt="S8" src="https://github.com/user-attachments/assets/3d0271ea-ce33-4272-ba91-60d03dc1fc87" />
 
-### Step 4
+### Step 4:
 
 * **Action:** Passed all Prerequisites Checks and clicked **Install**, to promote `AD-DC-01` to a Domain Controller, triggering an automatic server reboot.
 
