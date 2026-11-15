@@ -39,44 +39,59 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ### Step 4: Reviewing & Deploying the Virtual Machine
 * **Action:** Validated all configuration parameters on the **Review + create** screen and initiated deployment.
-* **Outcome:** Provisioned `AD-DC-01` along with its Virtual Network (`vnet-northcentralus-1`), Subnet, Network Security Group, and Public IP (`AD-DC-01-ip`).
-![Step 4 - VM Deployment Complete](images/04-vm-deployed.png)
-
-### Step 5: Verifying VM Guest Agent Health
-* **Action:** Monitored the VM Overview blade as the **Windows Azure Guest Agent** transitioned from `Not ready` during initial boot to `Ready`.
-* **Outcome:** Confirmed the server OS completed initialization and was ready for remote management.
-![Step 5 - VM Overview and Agent Status](images/05-vm-status.png)
 
 ---
 
 ## 🌐 Part 2: Remote Access via Azure Bastion (Zero-Client Setup)
 
-### Step 6: Troubleshooting One-Click Bastion Provisioning
-* **Action:** Attempted to connect via **Connect > Bastion** from a macOS Chrome browser without local RDP client software. Encountered an `ajaxExtended` / resource lock error (`Another operation on this or dependent resource is in progress`) while Azure provisioned the `AzureBastionSubnet` in the background.
-* **Outcome:** Monitored the Resource Group deployment status until the Bastion gateway finished provisioning (`Succeeded`).
-![Step 6 - Bastion Provisioning](images/06-bastion-deploy.png)
+### Step 1: 
+* **Action:** Attempted to connect via **Connect > Bastion** from a macOS Chrome browser without local RDP client software.
 
-### Step 7: Establishing Browser-Based RDP Session
+<img width="1467" height="827" alt="S5_2" src="https://github.com/user-attachments/assets/791ae214-62ff-4b54-9c80-c4785111ac6c" />
+
+### Step 2: 
 * **Action:** Entered local administrator credentials (`labadmin`) into the Azure Bastion portal blade and launched an HTML5 remote session in Chrome.
-* **Outcome:** Successfully connected to the Windows Server 2022 desktop and launched **Server Manager**.
-![Step 7 - Server Manager Dashboard](images/07-server-manager.png)
+
+ <img width="1470" height="831" alt="S6_2" src="https://github.com/user-attachments/assets/00afbd43-2472-415c-ac0c-457822fd0ba6" />
 
 ---
 
 ## 🏢 Part 3: Active Directory Domain Services (AD DS) Deployment
 
-### Step 8: Launching the Add Roles and Features Wizard
+### Step 1: 
 
-* **Step 1:** Open **Server Manager** dashboard, Inside Server Manager, select **Manage** (top right), select **Add Roles and Features** and chose **Role-based or feature-based installation** targeting `AD-DC-01`.
+* **Action:** Open **Server Manager** dashboard, Inside Server Manager, select **Manage** (top right), select **Add Roles and Features**
 
-<img width="1467" height="956" alt="S1_SERVER_DASH" src="https://github.com/user-attachments/assets/0dd2cdf5-73fd-4799-b062-9c2281a99235" />
+<img width="1467" height="832" alt="S1_SERVER_DASH" src="https://github.com/user-attachments/assets/0475bbd2-44e6-4cb3-9b6a-bef6b1ca3106" />
 
-* **Step 2:** Clicked **Next** through the initial screens, accept the required **Remote Server Administration Tools (RSAT)** features, enabled automatic restart if required. 
+### Step 2 
+* **Action:** Choose **Role-based or feature-based installation** targeting `AD-DC-01`.
 
-<img width="1470" height="920" alt="S2_NEXT" src="https://github.com/user-attachments/assets/61f8ee06-6e87-459c-9f2f-6604be344bf0" />
+<img width="1470" height="835" alt="S7_2" src="https://github.com/user-attachments/assets/0e9a521a-ad2f-440a-b619-38fdc317468a" />
 
-### Step 9: Installing the AD DS Server Role
-* **Step 1:** Selected **Active Directory Domain Services**. 
+### Step 3
+
+* **Action:** Click **Next** three times, navigating to **Server Roles**. Select **Active Directory Domain Services**.
+
+<img width="1470" height="956" alt="S3_ACTIVE_DIRECT" src="https://github.com/user-attachments/assets/9fe2290e-34be-4307-80ef-884a3976f174" />
+
+### Step 4 
+* **Action:** When a pop-up window appears asking to add management tools, click **Add features** then click **Next**
+
+<img width="1235" height="783" alt="S4" src="https://github.com/user-attachments/assets/d5881408-e1a3-4e4b-bff0-f255d0e89232" />
+
+### Step 5 
+
+* **Action:** Click **Next** twice, check **Restart the destination server automatically** if required, click **Yes**, and click **Install**.
+
+<img width="1227" height="748" alt="S5" src="https://github.com/user-attachments/assets/56fd6014-924b-4051-9719-f7282a891bea" />
+
+--- 
+
+## Part 4 : Installing the AD DS Server Role
+
+
+* **Action:** Selected **Active Directory Domain Services**. 
 
 <img width="1470" height="956" alt="S3_ACTIVE_DIRECT" src="https://github.com/user-attachments/assets/17ba6e71-42d7-4942-9c2e-c8f788bbff7f" />
 
@@ -86,7 +101,7 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 <img width="1227" height="748" alt="S5" src="https://github.com/user-attachments/assets/50689321-fe3c-48a8-b52c-bf5756b9bb6a" />
 
-* **Step 4:** Restart if required, and clicked **Install**.
+* **Step 4:** 
 
 <img width="1231" height="749" alt="Screenshot 2026-11-14 at 2 36 07 PM" src="https://github.com/user-attachments/assets/4938f2d1-08aa-4ded-a3b1-f489b330b1af" />
 
