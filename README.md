@@ -119,7 +119,7 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ---
 
-## 👥 Part 4: Directory Structuring & RBAC (OUs, Users, & Groups)
+## 👥 Part 5: Directory Structuring & RBAC (OUs, Users, & Groups)
 
 ### Step 12: Creating Department Organizational Units (OUs)
 * **Action:** Opened **Server Manager > Tools > Active Directory Users and Computers (ADUC)**, right-clicked **`lab.local`**, and created three top-level Organizational Units to separate administrative boundaries:
