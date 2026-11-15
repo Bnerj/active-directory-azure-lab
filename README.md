@@ -147,16 +147,19 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 <img width="1056" height="786" alt="S13" src="https://github.com/user-attachments/assets/10f31876-bc1b-4593-a608-db1940a5ac8d" />
 <img width="1055" height="782" alt="S14" src="https://github.com/user-attachments/assets/c703ecc8-faff-4236-bfe1-0ac21d8c6b7c" />
 
-### Step 14: Creating Department Security Groups
+### Step 5: 
 * **Action:** Created a dedicated **Global Security Group** inside each respective OU to enforce Role-Based Access Control (RBAC):
   * **`GRP-IT`** (inside `IT` OU)
   * **`GRP-HR`** (inside `HR` OU)
   * **`GRP-SALES`** (inside `Sales` OU)
-![Step 17 - Creating Security Groups](images/17-security-groups.png)
+    
+<img width="1054" height="778" alt="S16" src="https://github.com/user-attachments/assets/19c33a5e-8f35-4230-b374-6a3f61f35bfe" />
 
-### Step 15: Assigning Users to Department Security Groups
+### Step 6:
+
 * **Action:** Opened each Security Group's **Properties > Members** tab, clicked **Add**, validated employee names via **Check Names**, and linked all users to their corresponding department groups (`GRP-IT`, `GRP-HR`, `GRP-SALES`).
-![Step 18 - Adding Members to Security Groups](images/18-group-members.png)
+  
+<img width="1058" height="783" alt="S17" src="https://github.com/user-attachments/assets/2f03d683-7cd6-4638-86c6-558f6335228c" />
 
 ---
 
