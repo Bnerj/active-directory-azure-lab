@@ -65,6 +65,7 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 <img width="1467" height="832" alt="S1_SERVER_DASH" src="https://github.com/user-attachments/assets/0475bbd2-44e6-4cb3-9b6a-bef6b1ca3106" />
 
 ### Step 2 
+
 * **Action:** Choose **Role-based or feature-based installation** targeting `AD-DC-01`.
 
 <img width="1470" height="835" alt="S7_2" src="https://github.com/user-attachments/assets/0e9a521a-ad2f-440a-b619-38fdc317468a" />
@@ -76,6 +77,7 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 <img width="1470" height="956" alt="S3_ACTIVE_DIRECT" src="https://github.com/user-attachments/assets/9fe2290e-34be-4307-80ef-884a3976f174" />
 
 ### Step 4 
+
 * **Action:** When a pop-up window appears asking to add management tools, click **Add features** then click **Next**
 
 <img width="1235" height="783" alt="S4" src="https://github.com/user-attachments/assets/d5881408-e1a3-4e4b-bff0-f255d0e89232" />
@@ -88,32 +90,32 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 --- 
 
-## Part 4 : Installing the AD DS Server Role
+## Part 4 : Installing the AD DS Server Role / Promote Server to a Domain Controller 
 
+### Step 1
 
-* **Action:** Selected **Active Directory Domain Services**. 
+* **Action:** Clicked the **yellow triangle warning icon** in Server Manager and select **Promote this server to a domain controller**.
 
-<img width="1470" height="956" alt="S3_ACTIVE_DIRECT" src="https://github.com/user-attachments/assets/17ba6e71-42d7-4942-9c2e-c8f788bbff7f" />
+ <img width="1056" height="784" alt="S6" src="https://github.com/user-attachments/assets/7e746238-758c-4f40-bfcb-473120071b9a" />
 
-* **Step 2:** Accept the required **Remote Server Administration Tools (RSAT)** features, enabled automatic
+### Step 2 
 
-<img width="1235" height="783" alt="S4" src="https://github.com/user-attachments/assets/e42618bd-012e-4882-bb30-321804b2febc" />
+* **Action:** Select **Add a new forest** and specified Root domain name: **`lab.local`**
 
-<img width="1227" height="748" alt="S5" src="https://github.com/user-attachments/assets/50689321-fe3c-48a8-b52c-bf5756b9bb6a" />
+<img width="1058" height="789" alt="S7" src="https://github.com/user-attachments/assets/1c3adc6d-fda9-4b02-b39f-eb9c871e01bc" />
 
-* **Step 4:** 
+### Step 3 
 
-<img width="1231" height="749" alt="Screenshot 2026-11-14 at 2 36 07 PM" src="https://github.com/user-attachments/assets/4938f2d1-08aa-4ded-a3b1-f489b330b1af" />
+* **Action:** Configure Forest/Domain functional levels, integrated **DNS Server** and **Global Catalog (GC)** roles, and set a **Directory Services Restore Mode (DSRM)** password.
 
-### Step 10: Promoting `AD-DC-01` to a Domain Controller
-* **Action:** Clicked the post-deployment notification flag in Server Manager and selected **Promote this server to a domain controller**.
-* **Configuration:**
-  * Selected **Add a new forest** and specified Root domain name: **`lab.local`**
-  * Configured Forest/Domain functional levels, integrated **DNS Server** and **Global Catalog (GC)** roles, and set a **Directory Services Restore Mode (DSRM)** password.
-  * Passed all Prerequisites Checks and clicked **Install**.
-![Step 11 - Deployment Configuration Forest](images/11-dc-forest.png)
-![Step 12 - Domain Controller Options DSRM](images/12-dc-options.png)
-![Step 13 - Prerequisites Check Passed](images/13-dc-prereq.png)
+<img width="1056" height="784" alt="S8" src="https://github.com/user-attachments/assets/3d0271ea-ce33-4272-ba91-60d03dc1fc87" />
+
+### Step 4
+
+* **Action:** Passed all Prerequisites Checks and clicked **Install**.
+
+<img width="1058" height="785" alt="S9" src="https://github.com/user-attachments/assets/846baac1-df52-46c4-ae4c-4675ec92d196" />
+
 
 ### Step 11: Verifying Domain Controller Promotion
 * **Action:** Reconnected via Azure Bastion after automatic server reboot and verified `AD-DC-01` was operating as the Primary Domain Controller for `LAB`.
