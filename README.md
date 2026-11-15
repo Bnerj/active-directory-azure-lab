@@ -21,7 +21,7 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 ---
 
-## 📋 Part 1: Azure Infrastructure & Policy Troubleshooting
+## 📋 Part 1: Azure Infrastructure & Virtual Machine Deployment
 
 ### Step 1: 
 * **Action:** Created a new Virtual Machine in Azure Portal. 
@@ -258,6 +258,7 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 
 <img width="1463" height="832" alt="S32" src="https://github.com/user-attachments/assets/e44f4ffa-f86c-4be0-ab94-86b58fa6bbb0" />
 
+### Step 3: 
 
  * **Action:** Deleted the **Azure Bastion** resource from `AD-DC-01_group` and stopped `AD-DC-01` (**Stopped (deallocated)**) to protect Azure for Students credits.
 
