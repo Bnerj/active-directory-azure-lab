@@ -21,21 +21,40 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 ---
 ### Architecture Diagram
 
+### Architecture Diagram
+
 ```mermaid
-flowchart LR
-    Admin["💻 Admin Workstation<br>(macOS Chrome Browser)"] -->|"TLS / HTML5<br>(Zero-Client RDP)"| Bastion["🛡️ Azure Bastion<br>(AzureBastionSubnet /26)"]
-    
-    subgraph Azure["☁️ Microsoft Azure (North Central US | RG: AD-DC-01_group)"]
+flowchart TD
+    Admin["💻 Admin Workstation<br/>(macOS Chrome Browser)"] ==>|"TLS 443 / HTML5<br/>Zero-Client RDP"| Bastion
+
+    subgraph Azure["☁️ Microsoft Azure | North Central US (RG: AD-DC-01_group)"]
+        direction TB
         subgraph VNet["🌐 Virtual Network: vnet-northcentralus-1"]
-            Bastion -->|"Internal RDP<br>(Port 3389)"| DC["🖥️ AD-DC-01<br>Windows Server 2022<br>Domain: lab.local"]
-            
-            subgraph AD["🏢 Active Directory & GPO Structure"]
-                DC --- IT["📁 OU: IT<br>(GRP-IT)"]
-                DC --- HR["📁 OU: HR<br>(GRP-HR)"]
-                DC --- Sales["📁 OU: Sales<br>(GRP-SALES + GPO: Block Control Panel)"]
+            direction TB
+            Bastion["🛡️ Azure Bastion<br/>Subnet: AzureBastionSubnet (/26)"] ==>|"Internal RDP<br/>(Port 3389)"| DC["🖥️ AD-DC-01 (Windows Server 2022)<br/>Domain: lab.local | DNS & Global Catalog"]
+
+            subgraph OUs["🏢 Active Directory Organizational Units & RBAC"]
+                direction LR
+                IT["📁 OU: IT<br/>Group: GRP-IT"]
+                HR["📁 OU: HR<br/>Group: GRP-HR"]
+                Sales["📁 OU: Sales<br/>Group: GRP-SALES<br/>🔒 GPO: Block Control Panel"]
             end
+
+            DC --- IT
+            DC --- HR
+            DC --- Sales
         end
     end
+
+    style Admin fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#f8fafc
+    style Bastion fill:#0f766e,stroke:#2dd4bf,stroke-width:2px,color:#f8fafc
+    style DC fill:#1d4ed8,stroke:#93c5fd,stroke-width:2px,color:#ffffff
+    style IT fill:#334155,stroke:#94a3b8,stroke-width:1.5px,color:#f8fafc
+    style HR fill:#334155,stroke:#94a3b8,stroke-width:1.5px,color:#f8fafc
+    style Sales fill:#7f1d1d,stroke:#f87171,stroke-width:1.5px,color:#f8fafc
+    style Azure fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#93c5fd
+    style VNet fill:#172554,stroke:#60a5fa,stroke-width:1.5px,color:#bfdbfe
+    style OUs fill:#0f172a,stroke:#475569,stroke-width:1px,color:#cbd5e1
 ```
 ---
 
