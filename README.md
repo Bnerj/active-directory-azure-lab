@@ -37,7 +37,8 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 <img width="1470" height="792" alt="S4_2" src="https://github.com/user-attachments/assets/147ea9bd-1971-489e-b889-323cee48874a" />
 
-### Step 4: Reviewing & Deploying the Virtual Machine
+### Step 5: Reviewing & Deploying the Virtual Machine
+
 * **Action:** Validated all configuration parameters on the **Review + create** screen and initiated deployment.
 
 ---
@@ -186,25 +187,74 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ---
 
-## 🛡️ Part 6: Group Policy Object (GPO) Enforcement
+## 🛡️ Part 7: Group Policy Object (GPO) Enforcement
 
-### Step 18: Creating & Linking a Department GPO
-* **Action:** Opened **Server Manager > Tools > Group Policy Management**, expanded `Forest: lab.local > Domains > lab.local`, right-clicked the **`Sales`** OU, and selected **Create a GPO in this domain, and Link it here**. Named the GPO **`Block Control Panel`**.
-![Step 21 - Creating and Linking GPO](images/21-gpo-create.png)
+### Step 1: Creating & Linking a Department GPO
 
-### Step 19: Configuring Control Panel Restrictions
-* **Action:** Right-clicked **`Block Control Panel`**, selected **Edit** to open the Group Policy Management Editor, and navigated to:
-  `User Configuration > Policies > Administrative Templates > Control Panel`
-* **Configuration:** Opened **Prohibit access to Control Panel and PC settings**, set it to **Enabled**, and clicked **Apply > OK**.
-![Step 22 - GPO Editor Path](images/22-gpo-editor.png)
-![Step 23 - Enabling Control Panel Restriction](images/23-gpo-enabled.png)
+* **Action:** Opened **Server Manager > Tools (top right) > Group Policy Management**.
 
-### Step 20: Verifying GPO Scope & Inheritance
+<img width="812" height="781" alt="S20" src="https://github.com/user-attachments/assets/63abae85-ffb7-4194-a29f-957ae824443f" />
+
+### Step 2: 
+
+* **Action:** Expanded `Forest: lab.local > Domains > lab.local`, right-clicked the **`Sales`** OU, and selected **Create a GPO in this domain, and Link it here**.
+
+<img width="808" height="783" alt="S22" src="https://github.com/user-attachments/assets/6adf4b9a-ba27-461b-8284-4aafdd3d35f6" />
+
+### Step 3: Name the GPO **`Block Control Panel`**.
+
+<img width="915" height="745" alt="S23_2" src="https://github.com/user-attachments/assets/ee67a41d-61b5-4d50-88b6-e4ebf46f5f46" />
+
+### Step 4: 
+
+* **Action:** Right-clicked **`Block Control Panel`**, selected **Edit** to open the Group Policy Management Editor.
+
+<img width="813" height="783" alt="S23" src="https://github.com/user-attachments/assets/ddfe90cf-9472-42d7-bc6a-310dee3513fd" />
+
+
+### Step 5: 
+
+* **Action:** Navigated to `User Configuration > Policies > Administrative Templates > Control Panel`
+
+<img width="814" height="787" alt="S26" src="https://github.com/user-attachments/assets/ba060ffc-a6ff-477f-a311-fafdae63ba75" />
+
+<img width="810" height="788" alt="S27" src="https://github.com/user-attachments/assets/70c365a1-3ec7-4de7-915b-654843b229df" />
+
+### Step 6: 
+
+* **Action:** Opened **Prohibit access to Control Panel and PC settings**
+
+<img width="812" height="785" alt="S28" src="https://github.com/user-attachments/assets/7458e2f0-9a5a-4e76-b16e-acb76e2afc2c" />
+
+### Step 7: 
+
+* **Action:** * Set it to **Enabled**, and clicked **Apply > OK**.
+
+<img width="1073" height="784" alt="S29" src="https://github.com/user-attachments/assets/9bb6a433-1325-4435-b468-65983c2b2826" />
+
+### Step 8: 
 * **Action:** Confirmed in the Group Policy Management Console that **`Block Control Panel`** was actively linked and enforced exclusively on the **`Sales`** OU without affecting `IT` or `HR` users.
-![Step 24 - GPO Scope Verification](images/24-gpo-scope.png)
+
+<img width="1470" height="831" alt="S30" src="https://github.com/user-attachments/assets/e39b667e-7b44-4a2c-bad9-59b10d742ada" />
 
 ---
 
-## 💰 Part 7: Cloud Cost Optimization & Resource Cleanup
+## 💰 Part 8: Cloud Cost Optimization & Resource Cleanup
 
-### Step 21: Deleting High-Cost Bastion Gateway & Deallocating VM
+### Step 1: 
+
+* **Action:** Navigate to the Azure Portal Dashboard, Select `AD-DC-01_group` in the `resource` section 
+
+ <img width="1468" height="832" alt="S31" src="https://github.com/user-attachments/assets/710280fe-1698-406e-9b67-6ffe8013175a" />
+
+ ### Step 2:
+
+ * **Action:** Select `Connect` drop-down-menu, click `Bastion` and click on `vnet-northcentralus-1-bastion`.
+
+<img width="1463" height="832" alt="S32" src="https://github.com/user-attachments/assets/e44f4ffa-f86c-4be0-ab94-86b58fa6bbb0" />
+
+
+ * **Action:** Deleted the **Azure Bastion** resource from `AD-DC-01_group` and stopped `AD-DC-01` (**Stopped (deallocated)**) to protect Azure for Students credits.
+
+<img width="1470" height="794" alt="S33" src="https://github.com/user-attachments/assets/654cdbaf-610b-4c4d-b024-907eda61c618" />
+
