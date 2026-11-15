@@ -121,16 +121,31 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ## 👥 Part 5: Directory Structuring & RBAC (OUs, Users, & Groups)
 
-### Step 12: Creating Department Organizational Units (OUs)
-* **Action:** Opened **Server Manager > Tools > Active Directory Users and Computers (ADUC)**, right-clicked **`lab.local`**, and created three top-level Organizational Units to separate administrative boundaries:
+### Step 1: 
+* **Action:** Return to **Server Manager** Dashboard and navigate to **Tools** (top right), then **Active Directory Users and Computers (ADUC)**.
+
+<img width="1470" height="832" alt="S10" src="https://github.com/user-attachments/assets/3ff79c99-9a0c-4b91-a539-c8d979eeef6a" />
+
+### Step 2: 
+* **Action:** Right-clicked **`lab.local`**, and created three top-level Organizational Units to separate administrative boundaries:
   * **`IT`**
   * **`HR`**
   * **`Sales`**
-![Step 15 - ADUC Organizational Units](images/15-aduc-ous.png)
 
-### Step 13: Provisioning Employee User Accounts
-* **Action:** Created two simulated employee user accounts inside each department OU (6 users total), configuring user logon names (`@lab.local`) and initial domain passwords.
-![Step 16 - Creating Domain Users](images/16-create-users.png)
+  <img width="1057" height="782" alt="S11" src="https://github.com/user-attachments/assets/50f8722e-96af-4898-9104-509cb891b54e" />
+
+
+### Step 3: 
+* **Action:** Right-clicked **HR**, **IT**, and created two simulated employee user accounts inside each department OU (6 users total).
+
+<img width="1058" height="784" alt="S12" src="https://github.com/user-attachments/assets/016819dc-6b3e-45c9-9a57-d0bc3c31bba4" />
+
+### Step 4:
+
+* **Action:** Configuring user logon names (`@lab.local`) and initial domain passwords.
+
+<img width="1056" height="786" alt="S13" src="https://github.com/user-attachments/assets/10f31876-bc1b-4593-a608-db1940a5ac8d" />
+<img width="1055" height="782" alt="S14" src="https://github.com/user-attachments/assets/c703ecc8-faff-4236-bfe1-0ac21d8c6b7c" />
 
 ### Step 14: Creating Department Security Groups
 * **Action:** Created a dedicated **Global Security Group** inside each respective OU to enforce Role-Based Access Control (RBAC):
