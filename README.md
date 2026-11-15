@@ -94,32 +94,28 @@ This project demonstrates the end-to-end deployment, configuration, and administ
 
 ### Step 1
 
-* **Action:** Clicked the **yellow triangle warning icon** in Server Manager and select **Promote this server to a domain controller**.
+* **Action:** Click the **yellow triangle warning icon** in Server Manager and select **Promote this server to a domain controller**.
 
  <img width="1056" height="784" alt="S6" src="https://github.com/user-attachments/assets/7e746238-758c-4f40-bfcb-473120071b9a" />
 
 ### Step 2 
 
-* **Action:** Select **Add a new forest** and specified Root domain name: **`lab.local`**
+* **Action:** Select **Add a new forest** and specified Root domain name: **`lab.local`**. Click **Next**. 
 
 <img width="1058" height="789" alt="S7" src="https://github.com/user-attachments/assets/1c3adc6d-fda9-4b02-b39f-eb9c871e01bc" />
 
 ### Step 3 
 
-* **Action:** Configure Forest/Domain functional levels, integrated **DNS Server** and **Global Catalog (GC)** roles, and set a **Directory Services Restore Mode (DSRM)** password.
+* **Action:** Configure Forest/Domain functional levels, integrated **DNS Server** and **Global Catalog (GC)** roles, and set a **Directory Services Restore Mode (DSRM)** password. clicked **Next** through the remaining screens until reaching the **Prerequisites Check**.
+
 
 <img width="1056" height="784" alt="S8" src="https://github.com/user-attachments/assets/3d0271ea-ce33-4272-ba91-60d03dc1fc87" />
 
 ### Step 4
 
-* **Action:** Passed all Prerequisites Checks and clicked **Install**.
+* **Action:** Passed all Prerequisites Checks and clicked **Install**, to promote `AD-DC-01` to a Domain Controller, triggering an automatic server reboot.
 
 <img width="1058" height="785" alt="S9" src="https://github.com/user-attachments/assets/846baac1-df52-46c4-ae4c-4675ec92d196" />
-
-
-### Step 11: Verifying Domain Controller Promotion
-* **Action:** Reconnected via Azure Bastion after automatic server reboot and verified `AD-DC-01` was operating as the Primary Domain Controller for `LAB`.
-![Step 14 - Server Manager Post-Promotion](images/14-dc-verified.png)
 
 ---
 
