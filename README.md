@@ -18,7 +18,25 @@ Zero-trust remote administration via Azure Bastion, Active Directory forest prom
 * **Virtual Network:** `vnet-northcentralus-1` with dedicated `AzureBastionSubnet` (`/26`)
 * **Remote Access:** Azure Bastion (TLS-encrypted RDP over HTML5 in Chrome)
 * **Active Directory Domain:** `lab.local` (NetBIOS: `LAB`)
+---
+### Architecture Diagram
 
+```mermaid
+flowchart LR
+    Admin["💻 Admin Workstation<br>(macOS Chrome Browser)"] -->|"TLS / HTML5<br>(Zero-Client RDP)"| Bastion["🛡️ Azure Bastion<br>(AzureBastionSubnet /26)"]
+    
+    subgraph Azure["☁️ Microsoft Azure (North Central US | RG: AD-DC-01_group)"]
+        subgraph VNet["🌐 Virtual Network: vnet-northcentralus-1"]
+            Bastion -->|"Internal RDP<br>(Port 3389)"| DC["🖥️ AD-DC-01<br>Windows Server 2022<br>Domain: lab.local"]
+            
+            subgraph AD["🏢 Active Directory & GPO Structure"]
+                DC --- IT["📁 OU: IT<br>(GRP-IT)"]
+                DC --- HR["📁 OU: HR<br>(GRP-HR)"]
+                DC --- Sales["📁 OU: Sales<br>(GRP-SALES + GPO: Block Control Panel)"]
+            end
+        end
+    end
+```
 ---
 
 ## 📋 Part 1: Azure Infrastructure & Virtual Machine Deployment
